@@ -5,9 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.app.ActivityManager;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.os.BatteryManager;
 import android.os.Build;
 import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
@@ -64,6 +67,19 @@ public class MainActivity extends AppCompatActivity {
 
     private String message;
 
+    //battery
+    private TextView battery;
+    private BroadcastReceiver nBatInfoReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+
+
+            int level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL,0);
+            battery.setText(String.valueOf(level)+"%");
+
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,6 +95,9 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
+        //      battery
+        battery = (TextView) this.findViewById(R.id.text1);
+        this.registerReceiver(this.nBatInfoReceiver,new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
 
         arFragment = (ArFragment) getSupportFragmentManager().findFragmentById(R.id.ux_fragment);
         text = (TextView) findViewById(R.id.text);

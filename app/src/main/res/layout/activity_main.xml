@@ -93,4 +93,20 @@
         android:textSize="30sp"
         android:background="@color/translucent_black"/>
 
+    <!--battery percentage-->
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#000000"
+        tools:visibility="visible" />
+
 </FrameLayout>

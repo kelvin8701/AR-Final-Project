@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/AR_Measure.iml" filepath="$PROJECT_DIR$/.idea/AR_Measure.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AR_Measure.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AR_Measure.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AR-Final-Project.iml" filepath="$PROJECT_DIR$/.idea/modules/AR-Final-Project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AR-Final-Project.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AR-Final-Project.app.iml" />
     </modules>
   </component>
 </project>
